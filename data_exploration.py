@@ -6,17 +6,21 @@ import matplotlib.pyplot as plt
 # folder = "./data"
 # filenames = sorted(os.listdir(folder))
 
+# k = 100
 # data = []
 
 # for i, filename in enumerate(filenames):
 #     if filename.endswith('.npy'):
-
+#         if i >= k:
+#             break
 #         image = np.load(os.path.join(folder, filename))
 #         data.append(image)
-# np.save("./data/imgs", np.array(data))
+
+# np.save("./data.npy", np.array(data))
 
 
-data = np.load("./imgs.npy")
+
+data = np.load("./data.npy")
 
 print(data[0].shape)
 
@@ -37,5 +41,5 @@ def plot_imgs(dataset, i, cols):
     
 cols = 4
 
-# for i in range(len(data)):
-#     plot_imgs(data, i, cols)
+for i in range(len(data)):
+    plot_imgs(data, i, cols)

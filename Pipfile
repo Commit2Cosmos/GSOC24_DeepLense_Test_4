@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 denoising-diffusion-pytorch = "*"
 matplotlib = "*"
+tensorboard = "*"
 
 [dev-packages]
 
